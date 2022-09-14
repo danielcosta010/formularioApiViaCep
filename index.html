@@ -8,97 +8,100 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 class="titulo">Formulario de Cadastro</h1>
+<h1 class="titulo">Formulario de Cadastro</h1>
 <main class="principal">
   
-    <form id="formulario">
-      <h2>Dados pessoais</h2>
+  <form id="formulario" target="_blank" onsubmit="location.replace('./cadastro-finalizado.html')">
+    <h2>Dados pessoais</h2>
+    <div>
+      <label class="descricao" for="nome">Nome Completo</label>
+      <input class="entrada" type="text" id="nome" required>
+    </div>
+    <div class="form__dupla">
       <div>
-        <label class="descricao" for="nome">Nome Completo</label>
-        <input class="entrada" type="text" id="nome" required>
+        <label class="descricao" for="nascimento">Nascimento</label>
+        <input class="entrada" type="date" id="nascimento" required>
       </div>
-      <div class="form__dupla">
-        <div>
-          <label class="descricao" for="nascimento">Nascimento</label>
-          <input class="entrada" type="date" id="nascimento" required>
-        </div>
-        <div>
-          <label class="descricao" for="telefone">Telefone</label>
-          <input class="entrada" type="tel" id="telefone" placeholder="(xx)xxxxxxxxx">
-        </div>
+      <div>
+        <label class="descricao" for="telefone">Telefone</label>
+        <input class="entrada" type="tel" id="telefone" placeholder="(xx)xxxxxxxxx" required>
       </div>
+    </div>
+    
       
-        
-      <div>
-        <label class="descricao" for="email">E-mail</label>
-        <input class="entrada" type="email" id="email" placeholder="exemplo@email.com">
-      </div>
+    <div>
+      <label class="descricao" for="email">E-mail</label>
+      <input class="entrada" type="email" id="email" placeholder="exemplo@email.com" required>
+    </div>
 
-      <h2>Endereço</h2>
+    <h2>Endereço</h2>
+    <div>
+      <label class="descricao" for="cep">CEP</label>
+      <input class="entrada" name="cep" id="cep" required>
+      <div class="erro"></div>
+    </div>
+    <div>
+      <label class="descricao" for="rua">Rua</label>
+      <input class="entrada" name="rua" id="rua" required>
+    </div>
+    <div class="form__dupla">
       <div>
-        <label class="descricao" for="cep">CEP</label>
-        <input class="entrada" name="cep" id="cep">
-      </div>
-      <div>
-        <label class="descricao" for="rua">Rua</label>
-        <input class="entrada" name="rua" id="rua">
-      </div>
-      <div class="form__dupla">
-        <div>
-          <label class="descricao" for="numeo">Numero</label>
-          <input class="entrada" name="numero" id="numero">
-        </div>
-        <div>
-          <label class="descricao" for="complemento">Complemento</label>
-          <input class="entrada" name="complemento" id="complemento">
-        </div>
+        <label class="descricao" for="numeo">Numero</label>
+        <input class="entrada" name="numero" id="numero" required>
       </div>
       <div>
-        <label class="descricao" for="bairro">Bairro</label>
-        <input class="entrada" name="bairro" id="bairro">
+        <label class="descricao" for="complemento">Complemento</label>
+        <input class="entrada" name="complemento" id="complemento" required>
       </div>
-      <div class="form__dupla">
-        <div>
-          <label class="descricao" for="cidade">Cidade</label>
-          <input class="entrada" name="cidade" id="cidade">
-        </div>
-        <div>
-          <label class="descricao" for="estado">Estado</label>
-          <select id="estado" name="estado" class="entrada">
-            <option value="AC">Acre</option>
-            <option value="AL">Alagoas</option>
-            <option value="AP">Amapá</option>
-            <option value="AM">Amazonas</option>
-            <option value="BA">Bahia</option>
-            <option value="CE">Ceará</option>
-            <option value="DF">Distrito Federal</option>
-            <option value="ES">Espírito Santo</option>
-            <option value="GO">Goiás</option>
-            <option value="MA">Maranhão</option>
-            <option value="MT">Mato Grosso</option>
-            <option value="MS">Mato Grosso do Sul</option>
-            <option value="MG">Minas Gerais</option>
-            <option value="PA">Pará</option>
-            <option value="PB">Paraíba</option>
-            <option value="PR">Paraná</option>
-            <option value="PE">Pernambuco</option>
-            <option value="PI">Piauí</option>
-            <option value="RJ">Rio de Janeiro</option>
-            <option value="RN">Rio Grande do Norte</option>
-            <option value="RS">Rio Grande do Sul</option>
-            <option value="RO">Rondônia</option>
-            <option value="RR">Roraima</option>
-            <option value="SC">Santa Catarina</option>
-            <option value="SP">São Paulo</option>
-            <option value="SE">Sergipe</option>
-            <option value="TO">Tocantins</option>
-            <option value="EX">Estrangeiro</option>
-        </select>
-        </div>
+    </div>
+    <div>
+      <label class="descricao" for="bairro">Bairro</label>
+      <input class="entrada" name="bairro" id="bairro" required>
+    </div>
+    <div class="form__dupla">
+      <div>
+        <label class="descricao" for="cidade">Cidade</label>
+        <input class="entrada" name="cidade" id="cidade" required>
       </div>
-    </form>
+      <div>
+        <label class="descricao" for="estado">Estado</label>
+        <select id="estado" name="estado" class="entrada" required>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+          <option value="EX">Estrangeiro</option>
+      </select>
+      </div>
+    </div>
+
+    <input type="submit" value="Enviar formulário" class="formulario__botao" id="enviar">
+  </form>
 </main>
 
- 
+ <script src="main.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@ body, html {
 }
 
 .titulo {
-  background: blue;
+  background: rgb(49, 49, 119);
   padding: 1rem;
   color: aliceblue;
   text-align: center;
@@ -14,7 +14,7 @@ body, html {
   margin: auto;
 }
 .formulario {
-  padding: 3rem;
+ 
 }
 .descricao {
   display: block;
@@ -23,7 +23,7 @@ body, html {
   margin-left: .5rem;
 }
 .entrada {
-  width: 100%;
+  width: 90%;
   padding: .5rem 0 .5rem 1rem;
   border-radius: 1.5rem;
   border: 2px solid rgb(49, 49, 119);
@@ -32,4 +32,35 @@ body, html {
 .form__dupla {
   display: flex;
   justify-content: space-between;
+  width: 90%;
+}
+
+.formulario__botao {
+  background-color:  rgb(49, 49, 119);
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: .5rem;
+  margin: 1rem 0;
+  float: right;
+}
+.formulario__botao:hover{
+ background-color: rgb(107, 107, 235);
+ 
+}
+.erro__texto {
+  color: red;
+  margin-left: 10px;
+  margin-top: 0;
+}
+
+.cadastro__finalizado {
+  width: 50%;
+  margin: auto;
+  background-color: orange;
+  border-radius: 10px;
+  padding: 10px;
+}
+.cadastro__finalizado-titulo {
+  color: green;
 }
