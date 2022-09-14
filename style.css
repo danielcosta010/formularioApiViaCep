@@ -1,0 +1,35 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.titulo {
+  background: blue;
+  padding: 1rem;
+  color: aliceblue;
+  text-align: center;
+}
+.principal {
+  width: 60vw;
+  margin: auto;
+}
+.formulario {
+  padding: 3rem;
+}
+.descricao {
+  display: block;
+  font-size: 1.2rem;
+  padding: .2rem;
+  margin-left: .5rem;
+}
+.entrada {
+  width: 100%;
+  padding: .5rem 0 .5rem 1rem;
+  border-radius: 1.5rem;
+  border: 2px solid rgb(49, 49, 119);
+  margin-bottom: 1rem;
+}
+.form__dupla {
+  display: flex;
+  justify-content: space-between;
+}
