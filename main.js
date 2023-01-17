@@ -8,6 +8,8 @@ async function buscaEndereco(cep) {
 
     var rua = document.querySelector('#rua');
     var cidade = document.querySelector('#cidade');
+    var bairro = document.querySelector('#bairro');
+    var estado = document.querySelector('#estado');
   
     rua.value = consultaCepParaJson.logradouro;
     bairro.value = consultaCepParaJson.bairro;
