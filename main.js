@@ -4,6 +4,7 @@ async function buscaEndereco(cep) {
     mensagemDeErro.innerHTML = '';
     console.log(mensagemDeErro);
 	  var consultaCep = await (await fetch(`http://viacep.com.br/ws/${cep}/json/`)).json();
+      console.log(consultaCep);
 
     var rua = document.querySelector('#rua');
     var cidade = document.querySelector('#cidade');
