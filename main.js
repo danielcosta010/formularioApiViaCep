@@ -3,20 +3,19 @@ async function buscaEndereco(cep) {
     var mensagemDeErro = document.querySelector('.erro');
     mensagemDeErro.innerHTML = '';
     console.log(mensagemDeErro);
-	  var consultaCep = await fetch(`http://viacep.com.br/ws/${cep}/json/`);
-	  var consultaCepParaJson = await consultaCep.json();
+	  var consultaCep = await (await fetch(`http://viacep.com.br/ws/${cep}/json/`)).json();
 
     var rua = document.querySelector('#rua');
     var cidade = document.querySelector('#cidade');
     var bairro = document.querySelector('#bairro');
     var estado = document.querySelector('#estado');
   
-    rua.value = consultaCepParaJson.logradouro;
-    bairro.value = consultaCepParaJson.bairro;
-    cidade.value = consultaCepParaJson.localidade;
-    estado.value = consultaCepParaJson.uf;
+    rua.value = consultaCep.logradouro;
+    bairro.value = consultaCep.bairro;
+    cidade.value = consultaCep.localidade;
+    estado.value = consultaCep.uf;
 
-    return consultaCepParaJson
+    return consultaCep
 
 	} catch(erro) {
     mensagemDeErro.innerHTML = `<span>Cep inválido! Tente novamente.</span>`;
